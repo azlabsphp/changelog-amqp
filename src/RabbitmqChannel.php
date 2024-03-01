@@ -1,8 +1,8 @@
 <?php
 
-namespace Drewlabs\Changelog\Rabbitmq;
+namespace Drewlabs\Changelog\Amqp;
 
-use Drewlabs\Changelog\Rabbitmq\Exceptions\ChannelException;
+use Drewlabs\Changelog\Amqp\Exceptions\ChannelException;
 use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Exception\AMQPTimeoutException;
 use PhpAmqpLib\Exchange\AMQPExchangeType;

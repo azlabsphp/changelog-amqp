@@ -1,6 +1,6 @@
 <?php
 
-namespace Drewlabs\Changelog\Rabbitmq\Exceptions;
+namespace Drewlabs\Changelog\Amqp\Exceptions;
 
 use Exception;
 use Throwable;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drewlabs\Changelog\Rabbitmq;
+namespace Drewlabs\Changelog\Amqp;
 
 class Message implements Messageable
 {

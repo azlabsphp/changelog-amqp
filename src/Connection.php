@@ -1,8 +1,8 @@
 <?php
 
-namespace Drewlabs\Changelog\Rabbitmq;
+namespace Drewlabs\Changelog\Amqp;
 
-use Drewlabs\Changelog\Rabbitmq\Exceptions\ConnectionException;
+use Drewlabs\Changelog\Amqp\Exceptions\ConnectionException;
 use PhpAmqpLib\Connection\AMQPConnectionConfig;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Connection\AbstractConnection;

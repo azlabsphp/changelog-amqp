@@ -1,6 +1,6 @@
 {
-    "name": "drewlabs/changelog-rabbitmq",
-    "description": "RabbitMQ log driver implementation for drewlabs/changelog",
+    "name": "drewlabs/changelog-amqp",
+    "description": "amqplib log driver implementation for drewlabs/changelog",
     "type": "library",
     "require": {
         "drewlabs/changelog": "^0.1.0",
@@ -9,7 +9,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Drewlabs\\Changelog\\Rabbitmq\\": "src/"
+            "Drewlabs\\Changelog\\Amqp\\": "src/"
         }
     },
     "authors": [

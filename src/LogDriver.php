@@ -1,6 +1,6 @@
 <?php
 
-namespace Drewlabs\Changelog\Rabbitmq;
+namespace Drewlabs\Changelog\Amqp;
 
 use Drewlabs\Changelog\LogDriver as AbstractLogLogDriver;
 
