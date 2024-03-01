@@ -1,0 +1,27 @@
+{
+    "name": "drewlabs/changelog-rabbitmq",
+    "description": "RabbitMQ log driver implementation for drewlabs/changelog",
+    "type": "library",
+    "require": {
+        "drewlabs/changelog": "^0.1.0",
+        "php-amqplib/php-amqplib": "^3.6"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Drewlabs\\Changelog\\Rabbitmq\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "azandrew-sidoine",
+            "email": "azandrewdevelopper@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "prefer-stable": true
+}
