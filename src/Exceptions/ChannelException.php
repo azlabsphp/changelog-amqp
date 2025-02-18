@@ -8,10 +8,9 @@ use Throwable;
 class ChannelException extends Exception
 {
     /**
-     * Creates exception class
-     * @param Throwable $throwable 
+     * creates exception class
      */
-    public function __construct(string $message, int $code, \Throwable $throwable)
+    public function __construct(string $message, int $code, ?\Throwable $throwable = null)
     {
         parent::__construct($message, $code, $throwable);
     }

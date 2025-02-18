@@ -45,7 +45,7 @@ class RabbitmqChannel implements Channel
      * @return void 
      * @throws ChannelException 
      */
-    public function broadcast(Messageable $message, string $broker, string $queue = null)
+    public function broadcast(Messageable $message, string $broker, ?string $queue = null)
     {
         try {
             $this->channel->confirm_select();
@@ -106,7 +106,7 @@ class RabbitmqChannel implements Channel
      * @return void 
      * @throws AMQPTimeoutException 
      */
-    private function selectQueue(string $queue = null)
+    private function selectQueue(?string $queue = null)
     {
         // Making sure the queue exist before consuming from it
         $this->channel->queue_declare($queue ?? '', false, true, false, false);

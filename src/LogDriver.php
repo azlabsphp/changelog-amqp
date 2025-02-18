@@ -6,19 +6,13 @@ use Drewlabs\Changelog\LogDriver as AbstractLogLogDriver;
 
 class LogDriver implements AbstractLogLogDriver
 {
-    /**
-     * @var ConnectionInterface
-     */
+    /** @var ConnectionInterface */
     private $connection;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     private $topic;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     private $broker;
 
     /**

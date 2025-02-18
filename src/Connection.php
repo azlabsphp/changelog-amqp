@@ -7,25 +7,18 @@ use PhpAmqpLib\Connection\AMQPConnectionConfig;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Connection\AbstractConnection;
 
-
 class Connection implements ConnectionInterface
 {
-    /**
-     * 
-     * @var AbstractConnection
-     */
+    /** @var AbstractConnection */
     private $rabbit;
 
-    /**
-     * @var float
-     */
+    /** @var float */
     private $connection_timeout = 3.0;
 
-    /**
-     * @var float
-     */
+    /** @var float */
     private $read_write_timeout = 3.0 ;
 
+    /** @var mixed */
     private $server;
 
     /**
@@ -53,7 +46,7 @@ class Connection implements ConnectionInterface
      * @param AMQPConnectionConfig|null $config 
      * @return void 
      */
-    private function initializeConnection(AMQPConnectionConfig $config = null)
+    private function initializeConnection(?AMQPConnectionConfig $config = null)
     {
         $this->rabbit = new AMQPStreamConnection(
             $this->server->getHost(),
@@ -75,7 +68,7 @@ class Connection implements ConnectionInterface
         );
     }
 
-    public function getChannel(int $channel_id = null): RabbitmqChannel
+    public function getChannel(?int $channel_id = null): RabbitmqChannel
     {
         try {
             return new RabbitmqChannel($this->rabbit->channel($channel_id));

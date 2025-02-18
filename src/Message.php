@@ -4,39 +4,25 @@ namespace Drewlabs\Changelog\Amqp;
 
 class Message implements Messageable
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     private $topic;
 
-    /**
-     * @var string
-     */
+    /**  @var string */
     private $table;
 
-    /**
-     * @var string|int
-     */
+    /** @var string|int */
     private $instance;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     private $column;
 
-    /**
-     * @var mixed
-     */
+    /** @var mixed */
     private $previous;
 
-    /**
-     * @var mixed
-     */
+    /** @var mixed */
     private $current;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     private $by;
 
 
@@ -121,7 +107,7 @@ class Message implements Messageable
      * @param mixed $value 
      * @return static 
      */
-    public function withCurrentValue($value)
+    public function withCurrentValue($value = null)
     {
         $self = clone $this;
         $self->current = $value;
@@ -134,7 +120,7 @@ class Message implements Messageable
      * @param string|null $name 
      * @return static 
      */
-    public function withLogBy(string $value = null)
+    public function withLogBy(?string $value = null)
     {
         $self = clone $this;
         $self->by = $value;

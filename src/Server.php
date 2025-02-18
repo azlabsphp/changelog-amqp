@@ -4,29 +4,19 @@ namespace Drewlabs\Changelog\Amqp;
 
 class Server
 {
-    /**
-     * @var string
-     */
+    /** @var string */
     private $user;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     private $password;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     private $vhost;
 
-    /**
-     * @var string
-     */
+    /**  @var string */
     private $host;
 
-    /**
-     * @var int
-     */
+    /** @var int */
     private $port;
 
     /**
@@ -36,7 +26,7 @@ class Server
      * @param int|null $port 
      * @return void 
      */
-    public function __construct(string $host = null, int $port = null)
+    public function __construct(?string $host = null, ?int $port = null)
     {
         $this->host = $host;
         $this->port = $port;

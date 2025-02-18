@@ -15,7 +15,7 @@ interface Channel
      * @return void 
      * @throws ChannelException 
      */
-    public function broadcast(Messageable $message, string $broker, string $queue = null);
+    public function broadcast(Messageable $message, string $broker, ?string $queue = null);
 
     /**
      * Send a message to a given channel queue
