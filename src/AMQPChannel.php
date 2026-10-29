@@ -3,26 +3,26 @@
 namespace Drewlabs\Changelog\Amqp;
 
 use Drewlabs\Changelog\Amqp\Exceptions\ChannelException;
-use PhpAmqpLib\Channel\AMQPChannel;
+use PhpAmqpLib\Channel\AMQPChannel as BaseAMQPChannel;
 use PhpAmqpLib\Exception\AMQPTimeoutException;
 use PhpAmqpLib\Exchange\AMQPExchangeType;
 use PhpAmqpLib\Message\AMQPMessage;
 
-class RabbitmqChannel implements Channel
+class AMQPChannel implements Channel
 {
     /**
-     * @var AMQPChannel
+     * @var BaseAMQPChannel
      */
     private $channel;
 
     /**
      * Creates new channel instance
      * 
-     * @param AMQPChannel $channel
+     * @param BaseAMQPChannel $channel
      * 
      * @return void 
      */
-    public function __construct(AMQPChannel $channel)
+    public function __construct(BaseAMQPChannel $channel)
     {
         $this->channel = $channel;
 

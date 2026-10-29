@@ -25,11 +25,9 @@ class Message implements Messageable
     /** @var string */
     private $by;
 
-
     /**
      * Creates a rabbit mq message
-     * @param string|object $message 
-     * @param string $exchange 
+     * 
      * @param string $topic 
      * @return void 
      */
@@ -65,7 +63,8 @@ class Message implements Messageable
     /**
      * immuatable `instance` property value setter
      * 
-     * @param string $name 
+     * @param string $id
+     *  
      * @return static 
      */
     public function withInstance(string $id)
@@ -117,7 +116,8 @@ class Message implements Messageable
     /**
      * immuatable `logged by` property value setter
      * 
-     * @param string|null $name 
+     * @param string|null $value
+     *  
      * @return static 
      */
     public function withLogBy(?string $value = null)

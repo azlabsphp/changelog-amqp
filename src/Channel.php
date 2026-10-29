@@ -2,6 +2,8 @@
 
 namespace Drewlabs\Changelog\Amqp;
 
+use Drewlabs\Changelog\Amqp\Exceptions\ChannelException;
+
 interface Channel
 {
     /**

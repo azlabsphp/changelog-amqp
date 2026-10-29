@@ -31,8 +31,6 @@ class Connection implements ConnectionInterface
     public function __construct(Server $server, ?AMQPConnectionConfig $config = null)
     {
         $this->server = $server;
-        // By default the channel will use a lazy connection to the
-        // RabbitMQ server
         if (null === $config) {
             $config = new AMQPConnectionConfig;
             $config->setIsLazy(true);
@@ -68,10 +66,10 @@ class Connection implements ConnectionInterface
         );
     }
 
-    public function getChannel(?int $channel_id = null): RabbitmqChannel
+    public function getChannel(?int $channel_id = null): AMQPChannel
     {
         try {
-            return new RabbitmqChannel($this->rabbit->channel($channel_id));
+            return new AMQPChannel($this->rabbit->channel($channel_id));
         } catch (\Throwable $e) {
             throw new ConnectionException($e->getMessage(), $e->getCode(), $e);
         }
